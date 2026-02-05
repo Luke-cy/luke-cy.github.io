@@ -193,7 +193,7 @@ function generateSummary(summeryReport, changes, freeTime) {
 
     changes.forEach((delta, i) => {
         if (delta !== 0) {
-            const action = delta > 0 ? "Increased" : "Decreased";
+            const action = delta > 0 ? "Increase" : "Decrease";
             text += `${labels[i]}: ${action} by ${Math.abs(delta).toFixed(1)} hours.\n`;
         }
     });
