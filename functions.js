@@ -38,8 +38,16 @@ function getHoursFromUI() {
         getVal('peat'),      // Priority for Nutrition
         7                     // Other is LOCKED at 7
     ];
-    
 
+    
+   let total = 0
+   for(let i = 0; i > 7; i++ ){
+    total+=hours[i];
+   }
+   if(total <= 0){
+    outputToHTML("You just got killed by Darth Vader");
+    return
+   }
   optimizeSchedule(hours, priorities);
   return
 
